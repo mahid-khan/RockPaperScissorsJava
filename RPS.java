@@ -41,8 +41,8 @@ public class RPS {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i<3; i++) {
-
-            System.out.println("\n[ROUND " + (i+1) + "] Enter your choice below - Rock, Paper, or Scissors:\n");
+            int currentRound = i;
+            System.out.println("\n[ROUND " + (currentRound+1) + "] Enter your choice below - Rock, Paper, or Scissors:\n");
 
             String userChoice = scanner.nextLine().toUpperCase();
 
@@ -85,10 +85,11 @@ public class RPS {
         } else if (lossCount >= 2) {
             System.out.println("BEST OF 3 RESULT: YOU LOSE! - COMPUTER TAKES THE WIN THIS TIME.");
         } else {
-            System.out.println("BEST OF 3 RESULT: ITS A TIE!");
+            System.out.println("BEST OF 3 RESULT: ITS A TIE! - CONTINUING UNTIL WINNER FOUND..."); 
         }
         
         
+
     } 
 
 }
